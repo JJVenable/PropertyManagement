@@ -3,11 +3,11 @@ const Schema = mongoose.Schema
 
 const Task = new Schema(
     {
-        name: { type: String, required: true },
+        name: { type: String, required: false },
         AptNumber: { type: String, required: false },
-        issueToAddress: { type: String, required: true },
-        enterTenant: {type: Boolean, required: true},
-        dog: {type: Boolean, required: true},
+        issueToAddress: { type: String, required: false },
+        enterTenant: {type: String, required: false},
+        dog: {type: String, required: false},
         comments: {type: String, required: false},
     },
     { timestamps: true },

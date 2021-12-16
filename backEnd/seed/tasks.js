@@ -6,10 +6,8 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 const main = async () => {
     const tasks = [
-      { name: '',  AptNumber: '', issueToAddress: '', enterTenant: '', dog: '', comments: '' },
-      { name: '',  AptNumber: '', issueToAddress: '', enterTenant: '', dog: '', comments: '' },
-      
-       
+      { name: 'a',  AptNumber: 'b', issueToAddress: 'c', enterTenant: 'd', dog: 'e', comments: 'f' },
+      { name: 'g',  AptNumber: 'h', issueToAddress: 'i', enterTenant: 'j', dog: 'k', comments: 'l' },
     ]
 
     await Task.insertMany(tasks)
