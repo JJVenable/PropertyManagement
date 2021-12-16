@@ -16,6 +16,9 @@
 4. Heroku
 
 ### ***Getting Started***
+ [Trello](https://trello.com/b/lFcgcHuc/jv-property-project).
+ [CHD](https://lucid.app/lucidchart/7df9f11c-1acf-4a7d-bd89-1ac50f62da0b/edit?beaconFlowId=1C9D00E3480CD321&invitationId=inv_93af8c55-bad3-4b8a-b915-89db6859f8f5&page=0_0#).
+ [ERD](https://lucid.app/lucidchart/e1dcf8da-017e-4cf0-a0bc-bdd722821ada/edit?beaconFlowId=4A3D7667F4B60A19&invitationId=inv_3d803fb4-5a61-4ac4-94c9-c9b05dd29076&page=0_0#).
  [DummyLink](https://www.IllDeployThisLater).
 
 ### ***Screenshots:***
