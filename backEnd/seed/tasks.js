@@ -12,7 +12,7 @@ const main = async () => {
        
     ]
 
-    await Plant.insertMany(tasks)
+    await Task.insertMany(tasks)
     console.log("Created some Work Orders!")
 }
 const run = async () => {
