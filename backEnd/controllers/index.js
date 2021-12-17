@@ -18,7 +18,7 @@ const getAllTasks = async (req, res) => {
       const task = await Task.find()
       return res.status(200).json({ task })
   } catch (error) {
-      return res.status(500).send("problem with route?");
+      return res.status(500).send("problem with route for getAllTasks");
   }
 }
 
@@ -66,10 +66,85 @@ const deleteTask = async (req, res) => {
   }
 }
 
+{///////////////////////Property controllers below//////////////////////////////////////// 
+}
+
+const createProperty = async (req,res) => {
+  try {
+    const property = await new Property(req.body)
+    await property.save()
+    return res.status(201).json({
+      property,
+    })
+  } catch (error) {
+    return res.status(500).json({ error: error.message})
+  }
+}
+
+
+const getAllProperties = async (req, res) => {
+  try {
+      const property = await Property.find()
+      return res.status(200).json({ property })
+  } catch (error) {
+      return res.status(500).send("problem with route for getAllProperties");
+  }
+}
+
+const getPropertyById = async (req, res) => {
+  try {
+      const { id } = req.params;
+      const task = await Property.findById(id)
+      if (property) {
+          return res.status(200).json({ task });
+      }
+      return res.status(404).send('Property with the specified ID does not exists');
+  } catch (error) {
+      return res.status(500).send(error.message);
+  }
+}
+
+const updateProperty = async (req, res) => {
+  try {
+      const { id } = req.params;
+      await Property.findByIdAndUpdate(id, req.body, { new: true }, (err, task) => {
+          if (err) {
+              res.status(500).send(err);
+          }
+          if (!task) {
+              res.status(500).send('Property not found!');
+          }
+          return res.status(200).json(task);
+      })
+  } catch (error) {
+      return res.status(500).send(error.message);
+  }
+}
+
+
+const deleteProperty = async (req, res) => {
+  try {
+      const { id } = req.params;
+      const deleted = await Task.findByIdAndDelete(id)
+      if (deleted) {
+          return res.status(200).send("Task deleted");
+      }
+      throw new Error("Property not found");
+  } catch (error) {
+      return res.status(500).send(error.message);
+  }
+}
+
+
 module.exports = {
   createTask,
   getAllTasks,
   getTaskById,
   updateTask,
   deleteTask,
+  createProperty,
+  getAllProperties,
+  getPropertyById,
+  updateProperty,
+  deleteProperty,
 }
