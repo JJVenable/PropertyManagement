@@ -12,8 +12,6 @@ router.get('/tasks/:id', controllers.getTaskById);
 
 router.put('/tasks/:id', controllers.updateTask);
 
-router.put('/tasks/:id', controllers.updateTask)
-
 router.delete('/tasks/:id', controllers.deleteTask)
 
 // properties
@@ -22,8 +20,6 @@ router.get('/properties', controllers.getAllProperties);
 router.get('/properties/:id', controllers.getPropertyById);
 
 router.put('/properties/:id', controllers.updateProperty);
-
-router.put('/properties/:id', controllers.updateProperty)
 
 router.delete('/properties/:id', controllers.deleteProperty)
 

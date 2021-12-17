@@ -1,4 +1,5 @@
 const Task = require('../models/task')
+const Property = require('../models/property')
 
 const createTask = async (req,res) => {
   try {
