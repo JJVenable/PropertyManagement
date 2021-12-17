@@ -1,6 +1,6 @@
 const db = require('../db')
 const Task = require('../models/task')
-const Property = require('../models/property')
+
 
 // Connect to the database
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))

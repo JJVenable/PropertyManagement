@@ -9,7 +9,7 @@ const main = async () => {
     {location: '1600 Pennsylvania Ave NW, Washington, DC', owner: 'The USA govt', currentTenant: 'POTUS', comments:'Recheck with tenant in 4 year increments'}
   ]
   
-  await Property.instertMany(properties)
+  await Property.insertMany(properties)
   console.log("Also made some Properties to manage!")
 
 }
@@ -19,20 +19,3 @@ const run = async () => {
 }
 
 run()
-
-
-
-
-
-
-
-
-
-
-
-const properties = [
-  {location: '', owner: '', issueToAddress: '', currentTenant: '', comments:''}
-]
-
-await Property.instertMany(properties)
-console.log("Also made some Properties to manage!")

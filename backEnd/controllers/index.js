@@ -94,9 +94,9 @@ const getAllProperties = async (req, res) => {
 const getPropertyById = async (req, res) => {
   try {
       const { id } = req.params;
-      const task = await Property.findById(id)
+      const property = await Property.findById(id)
       if (property) {
-          return res.status(200).json({ task });
+          return res.status(200).json({ property });
       }
       return res.status(404).send('Property with the specified ID does not exists');
   } catch (error) {
@@ -107,14 +107,14 @@ const getPropertyById = async (req, res) => {
 const updateProperty = async (req, res) => {
   try {
       const { id } = req.params;
-      await Property.findByIdAndUpdate(id, req.body, { new: true }, (err, task) => {
+      await Property.findByIdAndUpdate(id, req.body, { new: true }, (err, property) => {
           if (err) {
               res.status(500).send(err);
           }
-          if (!task) {
+          if (!property) {
               res.status(500).send('Property not found!');
           }
-          return res.status(200).json(task);
+          return res.status(200).json(property);
       })
   } catch (error) {
       return res.status(500).send(error.message);
@@ -125,9 +125,9 @@ const updateProperty = async (req, res) => {
 const deleteProperty = async (req, res) => {
   try {
       const { id } = req.params;
-      const deleted = await Task.findByIdAndDelete(id)
+      const deleted = await Property.findByIdAndDelete(id)
       if (deleted) {
-          return res.status(200).send("Task deleted");
+          return res.status(200).send("Property deleted");
       }
       throw new Error("Property not found");
   } catch (error) {
