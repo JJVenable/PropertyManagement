@@ -16,9 +16,9 @@ const createTask = async (req,res) => {
 const getAllTasks = async (req, res) => {
   try {
       const task = await Task.find()
-      return res.status(200).json({ tasks })
+      return res.status(200).json({ task })
   } catch (error) {
-      return res.status(500).send(error.message);
+      return res.status(500).send("problem with route?");
   }
 }
 
@@ -52,10 +52,11 @@ const updateTask = async (req, res) => {
   }
 }
 
-const deletetask = async (req, res) => {
+
+const deleteTask = async (req, res) => {
   try {
       const { id } = req.params;
-      const deleted = await Park.findByIdAndDelete(id)
+      const deleted = await Task.findByIdAndDelete(id)
       if (deleted) {
           return res.status(200).send("Task deleted");
       }
@@ -70,5 +71,5 @@ module.exports = {
   getAllTasks,
   getTaskById,
   updateTask,
-  deletetask
+  deleteTask,
 }
