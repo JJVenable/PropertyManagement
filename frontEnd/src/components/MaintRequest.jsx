@@ -6,9 +6,8 @@ function MaintRequest(props) {
   return (
     <div className='requestPage' >
       <div>
-      <p1>Maintenance Request Page</p1>
-     
-    </div>
+      <p1>Request Form Here</p1>
+      </div>
     </div>
   )
 }

@@ -1,12 +1,13 @@
 import React from 'react'
-
+import {Link} from 'react-router-dom'
 
 function PropertiesList(props) {
-  console.log(props);
+  // const [selectedProperty, setProperty] = useState('')
   return (
     <div className='PListPage'>
       <div>
-      <p1>Properties List page</p1>
+      <p1>Render List of all properties here.</p1>
+      
       
     </div>
     </div>
