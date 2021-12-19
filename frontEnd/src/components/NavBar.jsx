@@ -6,9 +6,9 @@ function Nav() {
     <nav className="navbar">
       <div>
         <Link to='/'>Home</Link>
+        <Link to='/properties'>Properties Managed</Link>
         <Link to='/todo'>Task List</Link>
         <Link to='/maintrequests'>Maintenace Request</Link>
-        <Link to='/properties'>Properties Managed</Link>
       </div>
     </nav>
   )
