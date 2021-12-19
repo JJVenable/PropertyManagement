@@ -3,17 +3,10 @@
 .requestPage,
 .PListPage,
 .taskPage {
-  background-image: url(./components/building2.jpg);
+  background-image: url(../public/img/building2.jpg);
   height: 100vh;
   color: white;
 }
-
-
-
-
-
-
-
 
 
 
