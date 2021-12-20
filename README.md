@@ -37,7 +37,10 @@ Broken Image Template:
  
 
 ### ***Credits***
-TBD
+[Photo](https://unsplash.com/photos/VNTBsqERYWA) of buidling used for backgrounds by [Vlado Paunovic](https://unsplash.com/@vlado)
+[This](https://www.freecodecamp.org/news/react-background-image-tutorial-how-to-set-backgroundimage-with-inline-css-style/) taught me how to set background to image imported.
+[NavBar](https://www.w3schools.com/howto/howto_css_topnav_equal_width.asp) styling help.
+
 
 Technical Skills:
 

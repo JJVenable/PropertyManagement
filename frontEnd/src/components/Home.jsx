@@ -6,7 +6,7 @@ function Home(props) {
   return (
     <div className='homePage'>
       <div>
-      <p1> Home/landing Page</p1>
+      <p> Home/landing Page</p>
       </div>
     </div>
   )

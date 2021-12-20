@@ -6,7 +6,7 @@ function MaintRequest(props) {
   return (
     <div className='requestPage' >
       <div>
-      <p1>Request Form Here</p1>
+      <p>Request Form Here</p>
       </div>
     </div>
   )

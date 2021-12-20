@@ -6,7 +6,7 @@ function TaskList(props) {
   return (
     <div className='taskPage'  >
       <div>
-      <p1>All tasks/maint request render here</p1>
+      <p>All tasks/maint request render here</p>
     
     </div>
     </div>
