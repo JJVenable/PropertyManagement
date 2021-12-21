@@ -1,5 +1,4 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
 
 
 function PropertiesList(props) {
@@ -10,20 +9,20 @@ function PropertiesList(props) {
 console.log(props.PropertiesData)
 
 
-// return (
-//   // showProperty()
-//   <div>
+return (
+  // showProperty()
+  <div>
         
-//   { props.propertiesData.map((propertiesData) => ( 
-//     <div className="property-card" >
+  { props.propertiesData.map((propertiesData) => ( 
+    <div className="property-card" >
       
-//     <h3>{propertiesData}</h3>
-//   </div>
-//   ))}
+    <h3>{propertiesData}</h3>
+  </div>
+  ))}
 
 
 
-// </div>
-//   )
-// }
+</div>
+  )
+}
 export default PropertiesList
