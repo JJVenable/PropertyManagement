@@ -14,7 +14,7 @@ import {useState, useEffect} from 'react';
   
 function App() {
   const [propertiesData, setPropertiesData]= useState([])
-  const [taskData, setTaskData] = useState([]);
+  const [taskData, setTaskData] = useState({});
 
   // async function getTaskData () {
   //   const res = await axios.get("http://localhost:3001/api/tasks")
@@ -30,8 +30,8 @@ function App() {
     }
     async function getPropertiesData () {
       const res = await axios.get("http://localhost:3001/api/properties")
-      // console.log(res.data.property[0].owner)
-      setPropertiesData(res.data.property)
+      console.log(res)
+      setPropertiesData(res.data)
       
     }
     
@@ -39,7 +39,9 @@ function App() {
     getTaskData()
   }, [])
 
-  
+// for crud later?
+// const addTask = () => {}
+// const handleChange = (e)=> {}
 
   return (
     <div className="App">

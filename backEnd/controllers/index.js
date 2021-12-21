@@ -86,7 +86,7 @@ const createProperty = async (req,res) => {
 const getAllProperties = async (req, res) => {
   try {
       const property = await Property.find()
-      return res.status(200).json({ property })
+      return res.status(200).send( property )
   } catch (error) {
       return res.status(500).send("problem with route for getAllProperties");
   }
