@@ -39,7 +39,7 @@ function App() {
     getTaskData()
   }, [])
 
-// for crud later?
+// for crud later
 // const addTask = () => {}
 // const handleChange = (e)=> {}
 

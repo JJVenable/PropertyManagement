@@ -1,22 +1,35 @@
+import axios from 'axios'
 import React from 'react'
 import {useState} from 'react'
 
+
 function AddTask(props) {
+// **one version doesn't actually PUT**
+// const handleSubmit = (e) => {
+//   setLogForm.addTask(e)
+//   setLogForm.history.push('/tasks')
+// }
 
-const handleSubmit = (e) => {
-  setLogForm.addTask(e)
-  setLogForm.history.push('/tasks')
-
+const handleSubmit = async () => {
+  const res = await axios.post('http://localhost:3001/api/tasks', logForm);
+  setLogForm(res.data.LogForm)
+  console.log(res)
 }
 
 // const newTask = props.newTask;
-const [logForm, setLogForm] = useState({name: '', aptNumber: '', issueToAddress:'', enterTenant:'', dog:'', comments:''})
+const [logForm, setLogForm] = useState({
+  name: '', 
+  aptNumber: '', 
+  issueToAddress:'',
+  enterTenant:'', 
+  dog:'', 
+  comments:''})
 
 // console.log(newTask)
 return (
   <div>
   <h1>Put in a request/Add a task</h1>
-  <form onSubmit={handleSubmit}>
+  <form>
     <input
       type="text-area"
       value={logForm.name}
@@ -71,7 +84,7 @@ return (
       name={"comments"}
       placeholder={"Other comments/info"}
     />
-    <button>Submit Request</button>
+    <button onClick={handleSubmit}>Submit Request</button>
     </form>
     </div>
   )

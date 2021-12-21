@@ -1,18 +1,16 @@
 import React from 'react'
-import {useState} from 'react'
+// import {useState} from 'react'
 
 function PropertiesList(props) {
 
 //   const showProperty = (propertiesData) => {
 //     props.history.push(`/property/${propertiesData.id}`)
 //   }
-// console.log(props.propertiesData)
-// console.log(props.propertiesData[0])
-// console.log(props)
+
 return (
   
   <div>
-      
+    
   { props.propertiesData.map((propertiesData, index) => ( 
     <div key={index} className="property-card" >
       
@@ -20,6 +18,7 @@ return (
     <p>{propertiesData.owner}</p>
     <p>{propertiesData.currentTenant}</p>
     <p>{propertiesData.comments}</p>
+    
   </div>
   ))} 
 
