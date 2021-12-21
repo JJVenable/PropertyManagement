@@ -9,7 +9,7 @@ function PropertiesList(props) {
 
 return (
   
-  <div>
+  <div className='PListPage'>
     
   { props.propertiesData.map((propertiesData, index) => ( 
     <div key={index} className="property-card" >

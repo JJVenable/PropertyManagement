@@ -2,21 +2,10 @@ import axios from 'axios'
 import React from 'react'
 import {useState} from 'react'
 
+const MaintRequest = (props) => {
 
-function AddTask(props) {
-// **one version doesn't actually PUT**
-// const handleSubmit = (e) => {
-//   setLogForm.addTask(e)
-//   setLogForm.history.push('/tasks')
-// }
 
-const handleSubmit = async () => {
-  const res = await axios.post('http://localhost:3001/api/tasks', logForm);
-  setLogForm(res.data.LogForm)
-  console.log(res)
-}
 
-// const newTask = props.newTask;
 const [logForm, setLogForm] = useState({
   name: '', 
   aptNumber: '', 
@@ -25,16 +14,26 @@ const [logForm, setLogForm] = useState({
   dog:'', 
   comments:''})
 
-// console.log(newTask)
+const handleSubmit = 
+async (e) => {
+  (e).preventDefault()
+  setLogForm(logForm)
+  const res = await axios.post('http://localhost:3001/api/tasks', logForm);
+  console.log(res)
+  console.log(logForm)
+  console.log("working")
+}
+
+
 return (
-  <div>
+  <div className='requestPage'>
   <h1>Put in a request/Add a task</h1>
   <form>
     <input
       type="text-area"
       value={logForm.name}
       onChange={(e)=>{
-        setLogForm(e.target.value)
+        setLogForm({...logForm, name: e.target.value})
       }}
       name={"name"}
       placeholder={"name"}
@@ -43,7 +42,7 @@ return (
       type="text-area"
         value={logForm.aptNumber}
         onChange={(e)=>{
-          setLogForm(e.target.value)
+          setLogForm({...logForm, aptNumber: e.target.value})
         }}
         name={"aptNumber"}
         placeholder={"Apartment"}
@@ -52,7 +51,7 @@ return (
       type="text-area"
       value={logForm.issueToAddress}
       onChange={(e)=>{
-        setLogForm(e.target.value)
+        setLogForm({...logForm, issueToAddress: e.target.value})
       }}
       name={"issuetoAddress"}
       placeholder={"Main Issue"}
@@ -61,7 +60,7 @@ return (
       type="text-area"
       value={logForm.enterTenant}
       onChange={(e)=>{
-        setLogForm(e.target.value)
+        setLogForm({...logForm, enterTenant: e.target.value})
       }}
       name={"enterTenant"}
       placeholder={"Can Enter without tenant?"}
@@ -70,7 +69,7 @@ return (
       type="text-area"
       value={logForm.dog}
       onChange={(e)=>{
-        setLogForm(e.target.value)
+        setLogForm({...logForm, dog: e.target.value})
       }}
       name={"dog"}
       placeholder={"Is there a dog on site?"}
@@ -79,7 +78,7 @@ return (
       type="text-area"
       value={logForm.comments}
       onChange={(e)=>{
-        setLogForm(e.target.value)
+        setLogForm({...logForm, comments: e.target.value})
       }}
       name={"comments"}
       placeholder={"Other comments/info"}
@@ -88,6 +87,6 @@ return (
     </form>
     </div>
   )
-}
-
-export default AddTask
+    }
+  
+export default MaintRequest

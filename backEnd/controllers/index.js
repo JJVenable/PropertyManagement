@@ -5,7 +5,7 @@ const createTask = async (req,res) => {
   try {
     const task = await new Task(req.body)
     await task.save()
-    return res.status(201).json({
+    return res.status(201).send({
       task,
     })
   } catch (error) {
@@ -17,7 +17,7 @@ const createTask = async (req,res) => {
 const getAllTasks = async (req, res) => {
   try {
       const task = await Task.find()
-      return res.status(200).json({ task })
+      return res.status(200).send( task )
   } catch (error) {
       return res.status(500).send("problem with route for getAllTasks");
   }
@@ -74,7 +74,7 @@ const createProperty = async (req,res) => {
   try {
     const property = await new Property(req.body)
     await property.save()
-    return res.status(201).json({
+    return res.status(201).send({
       property,
     })
   } catch (error) {
