@@ -14,7 +14,7 @@ import {useState, useEffect} from 'react';
   
 function App() {
   const [propertiesData, setPropertiesData]= useState([])
-  const [taskData, setTaskData] = useState({});
+  const [taskData, setTaskData] = useState([]);
 
   // async function getTaskData () {
   //   const res = await axios.get("http://localhost:3001/api/tasks")
@@ -25,12 +25,12 @@ function App() {
   useEffect (()=> {
     async function getTaskData () {
       const res = await axios.get("http://localhost:3001/api/tasks")
-      // console.log(res.data)
+      console.log(res.data)
       setTaskData(res.data)
     }
     async function getPropertiesData () {
       const res = await axios.get("http://localhost:3001/api/properties")
-      console.log(res)
+      // console.log(res)
       setPropertiesData(res.data)
       
     }

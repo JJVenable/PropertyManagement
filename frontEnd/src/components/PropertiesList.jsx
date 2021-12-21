@@ -12,21 +12,14 @@ function PropertiesList(props) {
 return (
   
   <div>
-        <p>test</p>
-        
-        <p></p>
-        {/* <p>{props.propertiesData.owner}</p> */}
-        {/* <p>{props.propertiesData[0].owner}</p> */}
-        
-
-        {/* <p>{props.propertiesData}</p> */}
-        {/* <p>{propertiesData.owner}</p> */}
-
+      
   { props.propertiesData.map((propertiesData, index) => ( 
     <div key={index} className="property-card" >
       
-    <h3>{propertiesData.location}</h3>
-    <h3>{propertiesData.owner}</h3>
+    <p>{propertiesData.location}</p>
+    <p>{propertiesData.owner}</p>
+    <p>{propertiesData.currentTenant}</p>
+    <p>{propertiesData.comments}</p>
   </div>
   ))} 
 
