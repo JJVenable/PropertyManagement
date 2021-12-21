@@ -28,7 +28,7 @@ const getTaskById = async (req, res) => {
       const { id } = req.params;
       const task = await Task.findById(id)
       if (task) {
-          return res.status(200).json({ task });
+          return res.status(200).send({ task });
       }
       return res.status(404).send('Task with the specified ID does not exists');
   } catch (error) {
@@ -97,7 +97,7 @@ const getPropertyById = async (req, res) => {
       const { id } = req.params;
       const property = await Property.findById(id)
       if (property) {
-          return res.status(200).json({ property });
+        return res.status(200).send({ property });
       }
       return res.status(404).send('Property with the specified ID does not exists');
   } catch (error) {

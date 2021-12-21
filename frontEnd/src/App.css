@@ -8,7 +8,11 @@
   background-size: 100%;
   color: white;
 }
-
+.task-card,
+.property-card{
+  padding: 5px;
+  border: 3px solid rgb(13, 74, 21);
+}
 
 .navbar a {
   display:flex;
@@ -20,6 +24,7 @@
   text-align: center;
   color: white;
   justify-content: space-around;
+  margin-bottom: 25px
   
 }
 .navbar a:hover {

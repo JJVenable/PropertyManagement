@@ -3,10 +3,6 @@ import React from 'react'
 
 function PropertiesList(props) {
 
-//   const showProperty = (propertiesData) => {
-//     props.history.push(`/property/${propertiesData.id}`)
-//   }
-
 return (
   
   <div className='PListPage'>
