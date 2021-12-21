@@ -25,14 +25,16 @@ function App() {
   useEffect (()=> {
     async function getTaskData () {
       const res = await axios.get("http://localhost:3001/api/tasks")
-      console.log(res.data)
+      // console.log(res.data)
       setTaskData(res.data)
     }
     async function getPropertiesData () {
       const res = await axios.get("http://localhost:3001/api/properties")
-      console.log(res.data)
-      setPropertiesData(res.data)
+      // console.log(res.data.property[0].owner)
+      setPropertiesData(res.data.property)
+      
     }
+    
     getPropertiesData()
     getTaskData()
   }, [])
@@ -45,7 +47,7 @@ function App() {
       <NavBar />
     </header>
     <main>
-      {/* <button onClick={(getTaskData)}>getData</button> */}
+      
         <Route exact path="/" component={Home} />
         <Route
           exact path="/Properties"

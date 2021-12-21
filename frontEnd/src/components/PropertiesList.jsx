@@ -3,23 +3,29 @@ import React from 'react'
 
 function PropertiesList(props) {
 
-  const showProperty = (propertiesData) => {
-    props.history.push(`/property/${propertiesData.id}`)
-  }
-console.log(props.PropertiesData)
-
+//   const showProperty = (propertiesData) => {
+//     props.history.push(`/property/${propertiesData.id}`)
+//   }
+// console.log(props.PropertiesData)
+console.log(props.propertiesData[0].comments)
 
 return (
-  // showProperty()
+  
   <div>
+        <p>test</p>
         
-  { props.propertiesData.map((propertiesData) => ( 
+        <p></p>
+        <p>{props.propertiesData[0].comments}</p>
+        <p>{props.propertiesData}</p>
+        {/* <p>{propertiesData.property}</p> */}
+
+  {/* { props.propertiesData.map((propertiesData) => ( 
     <div className="property-card" >
       
-    <h3>{propertiesData}</h3>
+    <h3>{propertiesData.location}</h3>
   </div>
-  ))}
-
+  ))} */}
+ 
 
 
 </div>
