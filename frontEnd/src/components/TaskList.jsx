@@ -2,7 +2,8 @@ import React from 'react'
 
 
 function TaskList(props) {
-  console.log(props);
+  console.log(props.taskData);
+
   return (
     <div className='taskPage'  >
       <div>

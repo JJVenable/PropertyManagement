@@ -8,7 +8,7 @@ import Home from './components/Home'
 import MaintRequest from './components/MaintRequest';
 import axios from 'axios'
 import {useState, useEffect} from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 
 
   
@@ -16,31 +16,36 @@ function App() {
   const [propertiesData, setPropertiesData]= useState([])
   const [taskData, setTaskData] = useState([]);
 
+  // async function getTaskData () {
+  //   const res = await axios.get("http://localhost:3001/api/tasks")
+  //   console.log(res.data)
+  //   // setTaskData(res.data.task)
+  // }
+  
   useEffect (()=> {
-    async function getTasksData () {
-      const res = await axios.get("https://localhost:3001/api/tasks")
+    async function getTaskData () {
+      const res = await axios.get("http://localhost:3001/api/tasks")
       console.log(res.data)
-      setTaskData(res.data.tasks)
-      
+      setTaskData(res.data)
     }
-    getTasksData()
-  }, [])
-
-  useEffect (()=> {
     async function getPropertiesData () {
-      const res = await axios.get("https://localhost:3001/api/properties")
-      setPropertiesData(res.data.properties)
+      const res = await axios.get("http://localhost:3001/api/properties")
+      console.log(res.data)
+      setPropertiesData(res.data)
     }
     getPropertiesData()
+    getTaskData()
   }, [])
-  return (
-    
 
+  
+
+  return (
     <div className="App">
     <header>
       <NavBar />
     </header>
     <main>
+      {/* <button onClick={(getTaskData)}>getData</button> */}
         <Route exact path="/" component={Home} />
         <Route
           exact path="/Properties"
@@ -52,7 +57,11 @@ function App() {
         />
         <Route
           exact path="/todo"
-          component={(props) => <TaskList {...props} TaskList={TaskList} />}
+          component={(props) => <TaskList {...props} 
+          taskData={taskData} 
+          // handleNewTask={handleNewTask}
+          // addTask={addTask}
+          />}
         />
 
           

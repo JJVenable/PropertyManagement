@@ -1,32 +1,29 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
-// function justShowMe () {
-// return (
-//   <p2>something</p2>
-// )
-// }
-// export default justShowMe
+
 function PropertiesList(props) {
 
   const showProperty = (propertiesData) => {
     props.history.push(`/property/${propertiesData.id}`)
   }
+console.log(props.PropertiesData)
 
 
-return (
-      <div>
-
-    {props.propertyData.map((propertiesData) => ( 
+// return (
+//   // showProperty()
+//   <div>
         
-    <div className="property-card" >
-      <h3>{propertiesData.location}</h3>
-    </div>
-  ))}
+//   { props.propertiesData.map((propertiesData) => ( 
+//     <div className="property-card" >
+      
+//     <h3>{propertiesData}</h3>
+//   </div>
+//   ))}
 
 
 
 // </div>
-  )
-}
+//   )
+// }
 export default PropertiesList
