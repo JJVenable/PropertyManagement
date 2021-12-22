@@ -14,7 +14,7 @@ return (
     <p>Owner: {propertiesData.owner}</p>
     <p>Current Tenant: {propertiesData.currentTenant}</p>
     <p>Comments: {propertiesData.comments}</p>
-    
+    <p><button>Edit Comments</button></p>
   </div>
   ))} 
 

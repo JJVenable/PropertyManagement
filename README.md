@@ -40,8 +40,8 @@ Broken Image Template:
 [Photo](https://unsplash.com/photos/VNTBsqERYWA) of buidling used for backgrounds by [Vlado Paunovic](https://unsplash.com/@vlado)
 [This](https://www.freecodecamp.org/news/react-background-image-tutorial-how-to-set-backgroundimage-with-inline-css-style/) taught me how to set background to image imported.
 [NavBar](https://www.w3schools.com/howto/howto_css_topnav_equal_width.asp) styling help.
-
-
+[This](https://developer.mozilla.org/en-US/docs/Web/API/Location/reload) to refresh page once a delete has been performed. Thanks to Vlad for the tip of what sorts of commands were out in the wild.
+[ForFutureReading](https://www.w3schools.com/react/react_usecontext.asp)
 Technical Skills:
 
 [MarkDownGuide](https://ia.net/writer/support/general/markdown-guide)

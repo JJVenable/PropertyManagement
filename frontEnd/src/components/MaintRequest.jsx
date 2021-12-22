@@ -19,6 +19,7 @@ async (e) => {
   const res = await axios.post('http://localhost:3001/api/tasks', logForm);
   console.log(res)
   console.log(logForm)
+  window.location.reload() 
   console.log("working")
 }
 
@@ -26,7 +27,7 @@ async (e) => {
 return (
   <div className='requestPage'>
   <h1>Put in a request/Add a task</h1>
-  <form >
+  <form onSubmit={handleSubmit} >
     <input
       type="text-area"
       value={logForm.name}
@@ -81,7 +82,7 @@ return (
       name={"comments"}
       placeholder={"Other comments/info"}
     />
-    <button onClick={handleSubmit}>Submit Request</button>
+    <button>Submit Request</button>
     </form>
     </div>
   )
