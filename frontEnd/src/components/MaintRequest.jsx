@@ -4,8 +4,6 @@ import {useState} from 'react'
 
 const MaintRequest = (props) => {
 
-
-
 const [logForm, setLogForm] = useState({
   name: '', 
   aptNumber: '', 
@@ -28,7 +26,7 @@ async (e) => {
 return (
   <div className='requestPage'>
   <h1>Put in a request/Add a task</h1>
-  <form>
+  <form >
     <input
       type="text-area"
       value={logForm.name}
