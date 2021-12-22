@@ -1,7 +1,13 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
 
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
 const Task = ({ e, setCurrentTask }) => {
 
 const getThisID = () => {

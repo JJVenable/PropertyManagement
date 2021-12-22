@@ -1,17 +1,13 @@
 .App {
   background-image: url(../public/img/building2.jpg);
-  background-size: 100%;
+  background-size: cover;
   color: white;
-  height: 100vh
+  min-height: 100vh
 }
 
 /* /// these two need more length on background // */
-/* .homePage,
-.requestPage{
-  background-size: cover;
-  height: 100%
-} */
-
+/* .PListPage
+.taskPage {} */
 
 .PListPage,
 .taskPage,
