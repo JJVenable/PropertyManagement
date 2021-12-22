@@ -40,9 +40,9 @@ return (
     />
     <input
       type="text-area"
-        value={logForm.aptNumber}
+        value={logForm.AptNumber}
         onChange={(e)=>{
-          setLogForm({...logForm, aptNumber: e.target.value})
+          setLogForm({...logForm, AptNumber: e.target.value})
         }}
         name={"aptNumber"}
         placeholder={"Apartment"}

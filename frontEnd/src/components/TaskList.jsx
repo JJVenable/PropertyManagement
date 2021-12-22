@@ -21,7 +21,7 @@ function TaskList(props) {
     <div key={index} className="task-card" >
       
     <h4>Name: {taskData.name}</h4>
-    <p>Apt Number: {taskData.aptNumber}</p>
+    <p>Apt Number: {taskData.AptNumber}</p>
     <p>Issue to Address: {taskData.issueToAddress}</p>
     <p>Enter Without Tenant?: {taskData.enterTenant}</p>
     <p>Dog?: {taskData.dog}</p>
