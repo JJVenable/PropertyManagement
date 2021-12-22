@@ -16,7 +16,6 @@ return (
     <p>Current Tenant: {propertiesData.currentTenant}</p>
     <p>Comments: {propertiesData.comments}</p>
     
-    <p><button><Link to='/edit'>Edit Comment</Link></button></p>
   </div>
   ))} 
 

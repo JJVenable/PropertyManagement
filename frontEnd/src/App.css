@@ -1,7 +1,8 @@
 .App {
   background-image: url(../public/img/building2.jpg);
   background-size: 100%;
-  color: white
+  color: white;
+  height: 100vh
 }
 
 /* /// these two need more length on background // */

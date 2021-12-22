@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {Link} from 'react-router-dom'
 
 
 const Task = ({ e, setCurrentTask }) => {
@@ -17,6 +17,7 @@ const getThisID = () => {
     <p>Enter Without Tenant?: {e.enterTenant}</p>
     <p>Dog?: {e.dog}</p>
     <p>Other Comments: {e.comments}</p>
+    <p><button><Link to='/edit'>Edit Comment</Link></button></p>
     <p><button onClick={getThisID}>Close Request</button></p>
   </div>
 

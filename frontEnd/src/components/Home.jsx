@@ -8,7 +8,6 @@ function Home(props) {
       <div>
       <p> Home/landing Page</p>
       </div>
-      <footer>FOOTER</footer>
     </div>
   )
 }
