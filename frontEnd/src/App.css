@@ -4,11 +4,10 @@
   color: white;
   min-height: 100vh
 }
-
-/* /// these two need more length on background // */
-/* .PListPage
-.taskPage {} */
-
+.popBox{
+  background-color:deepskyblue;
+  opacity: 1;
+}
 .PListPage,
 .taskPage,
 .editPage {

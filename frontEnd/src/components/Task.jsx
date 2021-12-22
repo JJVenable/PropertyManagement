@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-
+import Popup from 'reactjs-popup';
 function openForm() {
   document.getElementById("myForm").style.display = "block";
 }
@@ -25,6 +25,14 @@ const getThisID = () => {
     <p>Other Comments: {e.comments}</p>
     <p><button><Link to='/edit'>Edit Comment</Link></button></p>
     <p><button onClick={getThisID}>Close Request</button></p>
+
+    <Popup trigger={<button> Edit Comment</button>} position="top center">
+    <div className="popBox">
+      Popup content here !!
+      </div>
+  </Popup>
+
+
   </div>
 
   )
