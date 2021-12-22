@@ -1,5 +1,6 @@
 import React from 'react'
-// import {useState} from 'react'
+import {Link} from 'react-router-dom'
+import {useState} from 'react'
 
 function PropertiesList(props) {
 
@@ -14,7 +15,8 @@ return (
     <p>Owner: {propertiesData.owner}</p>
     <p>Current Tenant: {propertiesData.currentTenant}</p>
     <p>Comments: {propertiesData.comments}</p>
-    <p><button>Edit Comments</button></p>
+    
+    <p><button><Link to='/edit'>Edit Comment</Link></button></p>
   </div>
   ))} 
 
