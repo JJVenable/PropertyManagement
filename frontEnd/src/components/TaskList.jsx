@@ -5,6 +5,7 @@ import Popup from 'reactjs-popup';
 
 function TaskList(props) {
   const [currentTask, setCurrentTask] = useState('')
+  
 
   
   useEffect(() => {
@@ -23,7 +24,7 @@ function TaskList(props) {
   return (
     <div className='taskPage'>
       {props.taskData.map((e, index) => (
-        <Task e={e} key={index} setCurrentTask={setCurrentTask} />
+        <Task task={e} key={index} setCurrentTask={setCurrentTask} />
 
       ))
       }

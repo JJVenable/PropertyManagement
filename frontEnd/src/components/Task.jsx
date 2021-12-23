@@ -4,38 +4,40 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
 
-const Task = ({ e, setCurrentTask, currentTask  }) => {
+const Task = ({ task, setCurrentTask, currentTask }) => {
   const [secondForm, setSecondForm] = useState({
     comments: ''
   })
 const getThisID = () => {
-  setCurrentTask(e._id)
+  setCurrentTask(task._id)
 }
 
-console.log(currentTask)
+
+const [otherTask, setOtherTask] = useState('')
+
+const getThatID = () => {
+  setOtherTask(task._id)
+}
+
 ////////// popupstuff ///
   const handleOtherSubmit = 
   async (e) => {
-    (e).preventDefault()
-    setSecondForm(secondForm)
-    const res = await axios.put(`http://localhost:3001/api/tasks/${currentTask}`, secondForm);
-    console.log(secondForm)
-    console.log("above is secondForm, below is currentTask(ID TO Pass)")
-    console.log(currentTask)
-
-    
+    e.preventDefault()
+    // setSecondForm(secondForm)
+    const res = await axios.put(`http://localhost:3001/api/tasks/${otherTask}`, secondForm);
+    window.location.reload() 
   }
 
 ///// popup////
   return (
     <div className="task-card" >
       
-    <h4>Name: {e.name}</h4>
-    <p>Apt Number: {e.AptNumber}</p>
-    <p>Issue to Address: {e.issueToAddress}</p>
-    <p>Enter Without Tenant?: {e.enterTenant}</p>
-    <p>Dog?: {e.dog}</p>
-    <p>Other Comments: {e.comments}</p>
+    <h4>Name: {task.name}</h4>
+    <p>Apt Number: {task.AptNumber}</p>
+    <p>Issue to Address: {task.issueToAddress}</p>
+    <p>Enter Without Tenant?: {task.enterTenant}</p>
+    <p>Dog?: {task.dog}</p>
+    <p>Other Comments: {task.comments}</p>
     {/* <p><button><Link to='/edit'>Edit Comment</Link></button></p> */}
     <p><button onClick={getThisID}>Close Request</button></p>
 
@@ -53,7 +55,7 @@ console.log(currentTask)
       name={"comments"}
       placeholder={"New Comment"}
     />
-    <button>Submit Request</button>
+    <button onClick={getThatID}>Send New Comment</button>
     </form>
     {/* ////// form /////// */}
       </div>
