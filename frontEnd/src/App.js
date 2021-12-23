@@ -17,12 +17,6 @@ function App() {
   const [propertiesData, setPropertiesData]= useState([])
   const [taskData, setTaskData] = useState([]);
 
-  // async function getTaskData () {
-  //   const res = await axios.get("http://localhost:3001/api/tasks")
-  //   console.log(res.data)
-  //   // setTaskData(res.data.task)
-  // }
-  
   useEffect (()=> {
     async function getTaskData () {
       const res = await axios.get("http://localhost:3001/api/tasks")
@@ -39,10 +33,6 @@ function App() {
     getPropertiesData()
     getTaskData()
   }, [])
-
-// for crud later
-// const addTask = () => {}
-// const handleChange = (e)=> {}
 
   return (
     <div className="App">
@@ -65,8 +55,6 @@ function App() {
           exact path="/todo"
           component={(props) => <TaskList {...props} 
           taskData={taskData} 
-          // handleNewTask={handleNewTask}
-          // addTask={addTask}
           />
         }
         />

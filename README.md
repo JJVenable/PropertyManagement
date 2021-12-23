@@ -42,6 +42,7 @@ Broken Image Template:
 [NavBar](https://www.w3schools.com/howto/howto_css_topnav_equal_width.asp) styling help.
 [This](https://developer.mozilla.org/en-US/docs/Web/API/Location/reload) to refresh page once a delete has been performed. Thanks to Vlad for the tip of what sorts of commands were out in the wild.
 [ForFutureReading](https://www.w3schools.com/react/react_usecontext.asp)
+[PopUP](https://www.npmjs.com/package/reactjs-popup)
 Technical Skills:
 
 [MarkDownGuide](https://ia.net/writer/support/general/markdown-guide)

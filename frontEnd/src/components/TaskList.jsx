@@ -23,9 +23,8 @@ function TaskList(props) {
 
   return (
     <div className='taskPage'>
-      {props.taskData.map((e, index) => (
-        <Task task={e} key={index} setCurrentTask={setCurrentTask} />
-
+      {props.taskData.map((taskk, index) => (
+        <Task task={taskk} key={index} setCurrentTask={setCurrentTask} />
       ))
       }
       

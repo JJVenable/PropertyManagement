@@ -41,14 +41,18 @@ const updateTask = async (req, res) => {
       const { id } = req.params;
       await Task.findByIdAndUpdate(id, req.body, { new: true }, (err, task) => {
           if (err) {
-              res.status(500).send(err);
+              res.status(500)
+              console.log(err)
+              console.log("error in 500 update Task")
           }
           if (!task) {
-              res.status(500).send('Task not found!');
+              res.status(500)
+              console.log("task not found in update Task")
           }
           return res.status(200).json(task);
       })
   } catch (error) {
+    console.log(error.message)
       return res.status(500).send(error.message);
   }
 }
