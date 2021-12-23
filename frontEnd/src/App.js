@@ -7,8 +7,8 @@ import TaskList from './components/TaskList'
 import Home from './components/Home'
 import MaintRequest from './components/MaintRequest';
 import axios from 'axios'
-import Edit from './components/Edit';
 import {useState, useEffect} from 'react';
+
 // import logo from './logo.svg';
 
 
@@ -50,7 +50,7 @@ function App() {
       <NavBar />
     </header>
     <main>
-      
+      <Switch>
         <Route exact path="/" component={Home} />
         <Route
           exact path="/Properties"
@@ -58,12 +58,9 @@ function App() {
         />
         <Route
           exact path="/maintrequests"
-          component={(props) => <MaintRequest {...props} MaintRequest={MaintRequest} />}
+          component={(props) => <MaintRequest {...props} />}
         />
-        <Route
-          exact path="/edit" component={Edit}
-          // component={(props) =>  />}
-        />
+        
         <Route
           exact path="/todo"
           component={(props) => <TaskList {...props} 
@@ -73,7 +70,7 @@ function App() {
           />
         }
         />
-
+</Switch>
           
       
     </main>

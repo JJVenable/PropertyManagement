@@ -6,8 +6,7 @@ import Popup from 'reactjs-popup';
 function TaskList(props) {
   const [currentTask, setCurrentTask] = useState('')
 
-
-
+  
   useEffect(() => {
     if (currentTask) {
       const deleteReq = async (e) => {
