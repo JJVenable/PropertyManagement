@@ -20,8 +20,14 @@
   display: inline-grid;
   grid-template-columns: 50% 50%;
 }
+.requestPage{
+  background-color: rgba(46, 75, 75, 0.6);
+  border: 3px solid rgb(11, 50, 17);
+  padding: 10px;
+  margin: 8px;
 
-
+}
+.homeDiv,
 .task-card,
 .property-card{
   padding: 5px;

@@ -5,20 +5,20 @@ import Popup from 'reactjs-popup';
 
 function TaskList(props) {
   const [currentTask, setCurrentTask] = useState('')
-  
 
-  
+
+
   useEffect(() => {
     if (currentTask) {
       const deleteReq = async (e) => {
-      const res = await axios.delete(`http://localhost:3001/api/tasks/${currentTask}`);
-    }
-    deleteReq()
-    window.location.reload() 
+        const res = await axios.delete(`http://localhost:3001/api/tasks/${currentTask}`);
+      }
+      deleteReq()
+      window.location.reload()
     } else {
       return null;
     }
-    
+
   }, [currentTask])
 
   return (
@@ -27,7 +27,7 @@ function TaskList(props) {
         <Task task={taskk} key={index} setCurrentTask={setCurrentTask} />
       ))
       }
-      
+
     </div>
   )
 }
