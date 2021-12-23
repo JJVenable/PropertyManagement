@@ -43,14 +43,7 @@
   color: white;
   
 }
-/* .homeDiv a{
-  text-decoration: none;
-  color: black;
-  width: 40px;
-}
-.homeDiv button {
-  width: 80px;
-} */
+
 .navbar a {
   display:flex;
   flex-direction: row;
