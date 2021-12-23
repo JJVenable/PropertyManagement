@@ -40,10 +40,17 @@
   min-width: 400px;
   font-weight: bold;
   background-color: rgba(46, 75, 75, 0.6); 
-
+  color: white;
+  
 }
-
-
+/* .homeDiv a{
+  text-decoration: none;
+  color: black;
+  width: 40px;
+}
+.homeDiv button {
+  width: 80px;
+} */
 .navbar a {
   display:flex;
   flex-direction: row;
