@@ -24,8 +24,6 @@ To run this locally, clone this to your repo to your local machine. CD into the 
  
 
 ### ***Screenshots:***
-Broken Image Template:
-
 [TaskList Page](https://i.imgur.com/0rzvbWR.png)
 
 
