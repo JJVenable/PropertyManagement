@@ -29,7 +29,7 @@ const MaintRequest = (props) => {
   return (
     <div className='requestPage'>
       <h1>Put in a request/Add a task</h1>
-      <form onSubmit={handleSubmit} >
+      <form onSubmit={handleSubmit} className='formOne' >
         <input
           type="text-area"
           value={logForm.name}
