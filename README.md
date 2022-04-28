@@ -13,7 +13,7 @@
 ### ***Technologies Used:***
 1. React
 2. JavaScript/HTML/CSS
-3. ~~MongoDB~~
+3. MongoDB/Mongoose backend
 4. ~~Heroku~~
 
 ### ***Getting Started***
