@@ -15,6 +15,7 @@ const Task = ({ task, setCurrentTask, currentTask }) => {
   
   const getThatID = () => {
     setOtherTask(task._id)
+    window.location.reload()
   }
 
   ////////// popupstuff ///
@@ -23,7 +24,7 @@ const Task = ({ task, setCurrentTask, currentTask }) => {
       e.preventDefault()
       // setSecondForm(secondForm)
       const res = await axios.put(`http://localhost:3001/api/tasks/${otherTask}`, secondForm);
-      window.location.reload()
+      // window.location.reload()
     }
 
   ///// popup////

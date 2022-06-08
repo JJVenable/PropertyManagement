@@ -48,14 +48,16 @@ const updateTask = async (req, res) => {
               console.log(error)
               console.log("error in 500 update Task")
           }
-          if (!task) {
-              res.status(500)
-              console.log("task not found in update Task")
-          }
-          return res.status(200).json(task);
+          // if (!task) {
+          //     res.status(500)
+          //     console.log("task not found in update Task")
+          // }
+          // return res.status(200).json(task);
+          return res.status(200)
       })
   } catch (error) {
     console.log(error.message)
+    console.log('you are in the right spot')
       return res.status(500).send(error.message);
   }
 }
