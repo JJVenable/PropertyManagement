@@ -35,14 +35,17 @@ const getTaskById = async (req, res) => {
       return res.status(500).send(error.message);
   }
 }
-
+///////
+//////
+//// problem/ bug here
+///
 const updateTask = async (req, res) => {
   try {
       const { id } = req.params;
-      await Task.findByIdAndUpdate(id, req.body, { new: true }, (err, task) => {
-          if (err) {
+      await Task.findByIdAndUpdate(id, req.body, { new: true }, (error, task) => {
+          if (error) {
               res.status(500)
-              console.log(err)
+              console.log(error)
               console.log("error in 500 update Task")
           }
           if (!task) {
@@ -112,9 +115,9 @@ const getPropertyById = async (req, res) => {
 const updateProperty = async (req, res) => {
   try {
       const { id } = req.params;
-      await Property.findByIdAndUpdate(id, req.body, { new: true }, (err, property) => {
-          if (err) {
-              res.status(500).send(err);
+      await Property.findByIdAndUpdate(id, req.body, { new: true }, (error, property) => {
+          if (error) {
+              res.status(500).send(error);
           }
           if (!property) {
               res.status(500).send('Property not found!');

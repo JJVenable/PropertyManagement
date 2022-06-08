@@ -37,7 +37,7 @@ const MaintRequest = (props) => {
             setLogForm({ ...logForm, name: e.target.value })
           }}
           name={"name"}
-          placeholder={"name"}
+          placeholder={"Name"}
         />
         <input
           type="text-area"
@@ -64,7 +64,7 @@ const MaintRequest = (props) => {
             setLogForm({ ...logForm, enterTenant: e.target.value })
           }}
           name={"enterTenant"}
-          placeholder={"Can Enter without tenant?"}
+          placeholder={"Enter without tenant?"}
         />
         <input
           type="text-area"

@@ -12,9 +12,7 @@ const Task = ({ task, setCurrentTask, currentTask }) => {
   }
 
   const [otherTask, setOtherTask] = useState('')
-
-
-
+  
   const getThatID = () => {
     setOtherTask(task._id)
   }
@@ -38,7 +36,7 @@ const Task = ({ task, setCurrentTask, currentTask }) => {
       <p>Enter Without Tenant?: {task.enterTenant}</p>
       <p>Dog?: {task.dog}</p>
       <p>Other Comments: {task.comments}</p>
-      {/* <p><button><Link to='/edit'>Edit Comment</Link></button></p> */}
+      
       <p><button onClick={getThisID}>Close Request</button></p>
 
       <Popup trigger={<button onClick={getThisID}> Edit Comment</button>} position="top center">
